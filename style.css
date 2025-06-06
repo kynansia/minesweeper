@@ -1,0 +1,174 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color:#181a1b ;
+    color:bisque;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+.status {
+    margin-bottom: 20px;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(30, 27px);
+    grid-template-rows: repeat(16, 27px);  
+    gap: 0; 
+    justify-content: center;
+    width: calc(30 * 27px); 
+    height: calc(16 * 27px); 
+    margin: auto; 
+    box-sizing: border-box;
+}
+
+.cell {
+    background-color: #4c545c;
+    text-align: center;
+    border: 1px solid #1e262e;
+    box-shadow: inset -2px -2px 5px #222a32, inset 2px 2px 5px #707880;
+    font-size: 23px; 
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    aspect-ratio: 1; 
+    line-height: normal; 
+    will-change: background-color, box-shadow;
+    cursor: default;
+}
+
+.cell.revealed {
+    box-shadow: none;
+    background-color: #384048;
+    border: 1px solid #1e262e;
+    font-weight: bold;
+    color: inherit;
+}
+
+.cell.flagged {
+    background-color: #4c545c;
+    color: inherit; 
+    font-size: 19px; 
+    transition: none;
+}
+
+.cell.mine {
+    background-color: #384048;
+    color: inherit;
+    font-size: 19px; 
+    transition: none;
+}
+
+.cell.clicked-bomb {
+    background-color: #cf5a5a; 
+    color: inherit;
+    font-size: 19px; 
+    transition: none;
+}
+
+.cell.pressed {
+    background-color: #384048;
+    box-shadow: none;
+    transition: none;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.cell.wrong-flag {
+    background-color: #924848; 
+    color: inherit;
+    box-shadow: none;
+    transition: none;
+}
+
+.display {
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    background-color: #000;
+    color: red;
+    font-family: 'Orbitron', monospace, sans-serif;
+    font-size: 32px;
+    text-align: center;
+    line-height: 40px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    box-shadow: inset -2px -2px 5px #222a32, inset 2px 2px 5px #707880;
+}
+
+.face-button {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    background: #4c545c;
+    box-shadow: inset -2px -2px 5px #222a32, inset 2px 2px 5px #707880;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.1s ease-in-out;
+    
+}
+
+.face-button:active {
+    background-color: #384048;
+    box-shadow: none;
+}
+
+
+.status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; 
+    margin: 20px 0;
+}
+
+
+.cell.number-1 {
+    color: #7bc5fd;
+}
+
+.cell.number-2 {
+    color: #66c266;
+}
+
+.cell.number-3 {
+    color: #ff7788;
+}
+
+.cell.number-4 {
+    color: #ee88ff;
+}
+
+.cell.number-5 {
+    color: #ddaa22;
+}
+
+.cell.number-6 {
+    color: #66cccc;
+}
+
+.cell.number-7 {
+    color: black;
+}
+
+.cell.number-8 {
+    color: grey;
+}
